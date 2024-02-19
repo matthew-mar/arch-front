@@ -1,0 +1,10 @@
+FROM node:14
+
+WORKDIR /app
+
+COPY arch2/package.json /app
+RUN npm install
+
+COPY arch2 /app
+
+CMD ["npm", "start"]
